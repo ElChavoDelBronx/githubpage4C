@@ -1,184 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Etiquetas HTML</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabla</title> 
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 20px;
-      }
-      .etiqueta {
-        font-weight: bold;
-        color: #1a73e8;
-      }
-      .atributo {
-        font-weight: bold;
-        color: #d93025;
-      }
-      .explicacion {
-        margin-bottom: 10px;
-      }
-      .ejemplo {
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        background-color: #f5f5f5;
-      }
-      .codigo {
-        font-family: monospace;
-        background-color: #eee;
-        padding: 2px 5px;
-      }
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Lexend', sans-serif;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin: 20px auto;
+            
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        th {
+            background-color: #0ea5a4;
+            color: white;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        ol, ul {
+            display: inline-block;
+            text-align: left;
+        }
+
     </style>
-  </head>
-  <body>
-    <h1>Investigación HTML</h1>
-
-    <p>
-      <span class="etiqueta">&lt;!DOCTYPE html&gt;</span> sirve para indicar al
-      navegador que el documento está escrito en HTML5.
-    </p>
-    <div class="ejemplo"><span class="codigo">&lt;!DOCTYPE html&gt;</span></div>
-
-    <p>
-      <span class="etiqueta">&lt;html&gt;</span> es la etiqueta raíz de la
-      página.<br />
-      Atributos:<br />
-      <span class="atributo">lang</span> indica el idioma del documento.<br />
-      <span class="atributo">dir</span> dirección del texto (izquierda a derecha
-      o al revés).
-    </p>
-    <div class="ejemplo">
-      <span class="codigo"
-        >&lt;html lang="es" dir="ltr"&gt; ... &lt;/html&gt;</span
-      >
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;head&gt;</span> contiene metadatos e
-      información que no se ve directamente.<br />
-      Dentro se usan:<br />
-      <span class="etiqueta">&lt;meta charset="utf-8"&gt;</span> define la
-      codificación.<br />
-      <span class="etiqueta">&lt;meta name="viewport"&gt;</span> hace que la
-      página sea responsiva.<br />
-      <span class="etiqueta">&lt;title&gt;</span> muestra el título en la
-      pestaña.<br />
-      <span class="etiqueta">&lt;link&gt;</span> conecta hojas de estilo.<br />
-      <span class="etiqueta">&lt;script&gt;</span> inserta código JS.
-    </p>
-    <div class="ejemplo">
-      <span class="codigo"
-        >&lt;head&gt;<br />
-        &nbsp;&nbsp;&lt;meta charset="utf-8"&gt;<br />
-        &nbsp;&nbsp;&lt;title&gt;Mi página&lt;/title&gt;<br />
-        &lt;/head&gt;</span
-      >
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;body&gt;</span> contiene todo el contenido
-      visible de la página.
-    </p>
-    <div class="ejemplo">
-      <span class="codigo">&lt;body&gt; ... &lt;/body&gt;</span>
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;img&gt;</span> sirve para mostrar imágenes.<br />
-      Atributos:<br />
-      <span class="atributo">src</span> ruta de la imagen.<br />
-      <span class="atributo">alt</span> texto alternativo.<br />
-      <span class="atributo">width</span> y
-      <span class="atributo">height</span> tamaño.<br />
-      <span class="atributo">loading</span> (lazy o eager) para cómo cargar la
-      imagen.
-    </p>
-    <div class="ejemplo">
-      <img
-        src="ImagenEjemplo.jpg"
-        alt="Imagen Ejemplo"
-        width="150"
-        height="150"
-      />
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;ul&gt;</span> crea listas con viñetas,
-      <span class="etiqueta">&lt;ol&gt;</span> listas numeradas y
-      <span class="etiqueta">&lt;li&gt;</span> cada elemento de la lista.<br />
-      Atributos de <span class="etiqueta">&lt;ol&gt;</span>:
-      <span class="atributo">start</span> número inicial,
-      <span class="atributo">reversed</span> orden inverso.
-    </p>
-    <div class="ejemplo">
-      <p>Lista desordenada:</p>
-      <ul>
-        <li>Elemento 1</li>
-        <li>Elemento 2</li>
-        <li>Elemento 3</li>
-      </ul>
-
-      <p>Lista ordenada:</p>
-      <ol start="3">
-        <li>Primer elemento</li>
-        <li>Segundo elemento</li>
-        <li>Tercer elemento</li>
-      </ol>
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;h1&gt;</span> a
-      <span class="etiqueta">&lt;h6&gt;</span> son encabezados.<br />
-      <span class="etiqueta">&lt;h1&gt;</span> es el título principal, debe
-      haber solo uno por página.<br />
-      <span class="etiqueta">&lt;h2&gt;</span> a
-      <span class="etiqueta">&lt;h6&gt;</span> son subtítulos en orden
-      jerárquico.
-    </p>
-    <div class="ejemplo">
-      <h1>H1: Título principal</h1>
-      <h2>H2: Subtítulo</h2>
-      <h3>H3: Sección</h3>
-      <h4>H4</h4>
-      <h5>H5</h5>
-      <h6>H6</h6>
-    </div>
-
-    <p><span class="etiqueta">&lt;p&gt;</span> define un párrafo de texto.</p>
-    <div class="ejemplo">
-      <p>
-        Este es un párrafo de ejemplo. Puedes escribir cualquier texto aquí.
-      </p>
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;a&gt;</span> crea enlaces.<br />
-      Atributos:<br />
-      <span class="atributo">href</span> destino del enlace.<br />
-      <span class="atributo">target</span> abre en misma pestaña o nueva
-      (_blank).<br />
-      <span class="atributo">rel</span> relación del enlace (noopener
-      noreferrer).<br />
-      <span class="atributo">download</span> descarga el recurso.
-    </p>
-    <div class="ejemplo">
-      <a href="https://www.google.com" target="_blank" rel="noopener"
-        >Ir a Google</a
-      >
-    </div>
-
-    <p>
-      <span class="etiqueta">&lt;strong&gt;</span> y
-      <span class="etiqueta">&lt;b&gt;</span>: Ponen el texto en negritas.
-      <strong>strong</strong> indica importancia semántica.
-    </p>
-    <div class="ejemplo">
-      <p>Texto normal, <strong>importante</strong>, <b>solo negritas</b>.</p>
-    </div>
-  </body>
+</head>
+<body>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th colspan="4"><h1>DOBLAJE</h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <div>
+                        En este blog enseñare algunos consejos para el DOBLAJE,<br>
+                        aprenderemos sobre un tema que parece sencillo, pero al<br>
+                        ponerlo en marcha, comienza a tener mayor complejidad
+                    </div>
+                </td>
+                <td colspan="2">
+                    <img src="microfono.png">
+                </td>
+                <td>
+                    <div>Para hacer doblaje, es necesario aprender a actuar, <br>
+                        actuar no es solo hablar, necesitas hacer una interpretación,<br>
+                        existen actores que incluso han llorado parados frente al microfono<br>
+                        Debes ser capaz de sentirlo</div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <ol start="1">
+                        <li>Escuchar dialogo original</li>
+                        <li>Marcar pausas en guión traducido</li>
+                        <li>Soltar dialogos</li>
+                        <li>Hacer una segunda toma de ser necesario</li>
+                    </ol>
+                </td>
+                <td colspan="2">
+                    <ul>
+                        <li>Visualizar la escena como una ola</li>
+                        <li>Generar suavidad en los dialogos</li>
+                        <li>Pronunciar todas las letras de la palabra</li>
+                        <li>Perder el miedo al microfono</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <p>Mi corta experiencia me ha mostrado que uno de los aspectos
+                        mas importantes al hacer doblaje, es perder el miedo al microfono,
+                        cuando se pierde el miedo al microfono, la voz se escucha diferente
+                        pasamos de tener un audio de WhatsApp a sonar con una voz de comercial
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Sincronización</td>
+                <td>Fidelidad</td>
+                <td>Adaptación</td>
+                <td>Calidad</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
 </html>
 
